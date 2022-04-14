@@ -1,0 +1,3 @@
+Export list for omv:
+/export         10.0.0.0/24
+/export/radi-sh 10.0.0.0/24

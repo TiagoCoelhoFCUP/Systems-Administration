@@ -1,0 +1,20 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda1 during installation
+UUID=2a8552ac-83e3-4289-8e69-ef85172bf443 /               ext4    errors=remount-ro 0       1
+# swap was on /dev/sda5 during installation
+UUID=f2b28384-e2d8-46a2-8a75-ab6cee95ac4d none            swap    sw              0       0
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+tmpfs           /tmp            tmpfs   defaults        0       0
+# >>> [openmediavault]
+/dev/disk/by-label/rd10 /srv/dev-disk-by-label-rd10 ext4 defaults,nofail,user_xattr,noexec,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,acl 0 2
+/dev/disk/by-label/lv2 /srv/dev-disk-by-label-lv2 ext4 defaults,nofail,user_xattr,noexec,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,acl 0 2
+/dev/disk/by-label/lv1 /srv/dev-disk-by-label-lv1 ext4 defaults,nofail,user_xattr,noexec,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,acl 0 2
+/srv/dev-disk-by-label-rd10/radi-sh /export/radi-sh none bind,nofail 0 0
+# <<< [openmediavault]
+

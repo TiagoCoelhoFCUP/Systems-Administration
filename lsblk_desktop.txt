@@ -1,0 +1,11 @@
+NAME                            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                               8:0    0   12G  0 disk 
+├─sda1                            8:1    0    1G  0 part /boot
+└─sda2                            8:2    0   11G  0 part 
+  ├─fedora_localhost--live-root 253:0    0  7,5G  0 lvm  /
+  ├─fedora_localhost--live-swap 253:1    0  1,2G  0 lvm  [SWAP]
+  └─fedora_localhost--live-home 253:2    0  3,3G  0 lvm  /home
+sdb                               8:16   0    4G  0 disk 
+├─fedora_localhost--live-root   253:0    0  7,5G  0 lvm  /
+└─fedora_localhost--live-home   253:2    0  3,3G  0 lvm  /home
+

@@ -1,0 +1,4 @@
+  PV         VG                    Fmt  Attr PSize   PFree
+  /dev/sda2  fedora_localhost-live lvm2 a--  <11,00g    0 
+  /dev/sdb   fedora_localhost-live lvm2 a--   <4,00g 3,00g
+

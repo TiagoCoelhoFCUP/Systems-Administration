@@ -1,0 +1,113 @@
+version: 1
+
+#
+# LDAPv3
+# base <dc=admins,dc=ads,dc=dcc> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# admins.ads.dcc
+dn: dc=admins,dc=ads,dc=dcc
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Administradores
+dc: admins
+
+# Manager, admins.ads.dcc
+dn: cn=Manager,dc=admins,dc=ads,dc=dcc
+objectClass: organizationalRole
+cn: Manager
+description: Manager do Grupo
+
+# Developers, admins.ads.dcc
+dn: ou=Developers,dc=admins,dc=ads,dc=dcc
+objectClass: organizationalUnit
+ou: Developers
+
+# Administrativos, admins.ads.dcc
+dn: ou=Administrativos,dc=admins,dc=ads,dc=dcc
+objectClass: organizationalUnit
+ou: Administrativos
+
+# user2, Developers, admins.ads.dcc
+dn: cn=user2,ou=Developers,dc=admins,dc=ads,dc=dcc
+objectClass: top
+objectClass: posixGroup
+cn: user2
+memberUid: user2
+gidNumber: 1004
+
+# user3, Developers, admins.ads.dcc
+dn: cn=user3,ou=Developers,dc=admins,dc=ads,dc=dcc
+objectClass: top
+objectClass: posixGroup
+gidNumber: 1002
+cn: user3
+memberUid: user3
+
+# user2, Developers, admins.ads.dcc
+dn: uid=user2,ou=Developers,dc=admins,dc=ads,dc=dcc
+uid: user2
+cn: user2
+objectClass: account
+objectClass: posixAccount
+objectClass: top
+objectClass: shadowAccount
+shadowLastChange: 0
+shadowMax: 0
+shadowWarning: 0
+loginShell: /bin/bash
+uidNumber: 1004
+gidNumber: 1004
+homeDirectory: /net/home/user2
+userPassword:: e1NTSEF9dnFnM1R6TzdmU2ZjS3VJS1JybFdLK3QzYU5waU1VSzk=
+
+# user3, Developers, admins.ads.dcc
+dn: uid=user3,ou=Developers,dc=admins,dc=ads,dc=dcc
+uid: user3
+cn: user3
+objectClass: account
+objectClass: posixAccount
+objectClass: top
+objectClass: shadowAccount
+shadowLastChange: 0
+shadowMax: 0
+shadowWarning: 0
+loginShell: /bin/bash
+uidNumber: 1002
+gidNumber: 1002
+homeDirectory: /net/home/user3
+userPassword:: e1NTSEF9QTJMcUVnOW55eHE4Nk1WWmM3bFZOTUVJSkR2S1piY24=
+
+# user1, Administrativos, admins.ads.dcc
+dn: cn=user1,ou=Administrativos,dc=admins,dc=ads,dc=dcc
+objectClass: top
+objectClass: posixGroup
+gidNumber: 1003
+cn: user1
+memberUid: user1
+
+# user1, Administrativos, admins.ads.dcc
+dn: uid=user1,ou=Administrativos,dc=admins,dc=ads,dc=dcc
+uid: user1
+cn: user1
+objectClass: account
+objectClass: posixAccount
+objectClass: top
+objectClass: shadowAccount
+shadowLastChange: 0
+shadowMax: 0
+shadowWarning: 0
+loginShell: /bin/bash
+uidNumber: 1003
+gidNumber: 1003
+homeDirectory: /net/home/user1
+userPassword:: e1NTSEF9UTNYeHpPSTNEUVV4SnZFcjJFWGtBUzJrZXNONFZmNmk=
+
+# search result
+
+# numResponses: 11
+# numEntries: 10
+

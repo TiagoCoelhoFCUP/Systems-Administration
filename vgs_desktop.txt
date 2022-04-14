@@ -1,0 +1,3 @@
+  VG                    #PV #LV #SN Attr   VSize  VFree
+  fedora_localhost-live   2   3   0 wz--n- 14,99g 3,00g
+

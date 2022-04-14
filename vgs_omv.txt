@@ -1,0 +1,2 @@
+  VG      #PV #LV #SN Attr   VSize VFree
+  vg2disk   2   2   0 wz--n- 3.99g 1.48g
